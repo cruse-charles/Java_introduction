@@ -9,10 +9,14 @@ class QuickStart {
     public static void main(String[] args) {
         // Must initialize variabbles and declare what type they are, must have ; at the
         // end or there will be compiling issues
-        int age = 27;
+        // int age = 27;
 
-        age = 28;
-        System.out.println("I am " + age + " years old.");
+        // age = 28;
+        // System.out.println("I am " + age + " years old.");
+
+        char percentSign = '%';
+        System.out.println(percentSign);
 
     }
+
 }
