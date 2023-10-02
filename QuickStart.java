@@ -14,9 +14,14 @@ class QuickStart {
         // age = 28;
         // System.out.println("I am " + age + " years old.");
 
-        char percentSign = '%';
-        System.out.println(percentSign);
+        String name = "Charles Charles";
+        String country = "USA";
+        int age = 30;
 
+        System.out.println("Hello, I'm " + name + ". I'm from " + country + " and I'm " + age + "years old.");
+
+        String formattedString = String.format("Hello, I'm %s. I am from %s. I am %d years old.", name, country, age);
+        System.out.println(formattedString);
     }
 
 }
