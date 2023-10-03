@@ -17,11 +17,12 @@ class QuickStart {
         // age = 28;
         // System.out.println("I am " + age + " years old.");
 
-        int numbers[] = { 1, 2, 3, 4, 5 };
+        int number = 5;
+        int multiplier = 1;
 
-        // easier way to loop through an array
-        for (int number : numbers) {
-            System.out.println(number);
+        while (multiplier <= 5) {
+            System.out.printf("%d * %d \n", number, multiplier);
+            multiplier++;
         }
     }
 }
