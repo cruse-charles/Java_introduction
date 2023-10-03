@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class QuickStart {
     // static int age = 27; -> Can have our variable initialized outside of our
     // codeblock and still have access, but must be static, static method only works
@@ -14,14 +16,27 @@ class QuickStart {
         // age = 28;
         // System.out.println("I am " + age + " years old.");
 
-        String name = "Charles Charles";
-        String country = "USA";
-        int age = 30;
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Hello, I'm " + name + ". I'm from " + country + " and I'm " + age + "years old.");
+        System.out.print("Enter the first number: ");
+        double number1 = scanner.nextDouble();
+        scanner.nextLine();
 
-        String formattedString = String.format("Hello, I'm %s. I am from %s. I am %d years old.", name, country, age);
-        System.out.println(formattedString);
+        System.out.print("Enter the second number: ");
+        double number2 = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println(number1);
+        System.out.println(number2);
+
+        System.out.print("What operation do you want to perform? ");
+        String operation = scanner.nextLine();
+
+        if (operation.equals("sum")) {
+            System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
+        }
+
+        scanner.close();
     }
 
 }
