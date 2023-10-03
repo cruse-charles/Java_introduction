@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 class QuickStart {
     // static int age = 27; -> Can have our variable initialized outside of our
@@ -16,27 +17,27 @@ class QuickStart {
         // age = 28;
         // System.out.println("I am " + age + " years old.");
 
-        Scanner scanner = new Scanner(System.in);
+        int numbers[] = { 1, 2, 3, 4, 5 };
+        int copyOfNumbers[] = numbers;
+        Arrays.fill(numbers, 0);
 
-        System.out.print("Enter the first number: ");
-        double number1 = scanner.nextDouble();
-        scanner.nextLine();
+        int realCopy[] = Arrays.copyOf(numbers, numbers.length);
+        // This is how we make a real copy, takes the array and the length, we can make
+        // the array larger or smaller too which will fill more elements with 0, the
+        // default value for integers. If we make it smaller, it just copies those first
+        // X values
 
-        System.out.print("Enter the second number: ");
-        double number2 = scanner.nextDouble();
-        scanner.nextLine();
+        System.out.println(numbers == realCopy);
+        // This will reteurn as false now
 
-        System.out.println(number1);
-        System.out.println(number2);
+        System.out.println(numbers);
+        System.out.println(realCopy);
 
-        System.out.print("What operation do you want to perform? ");
-        String operation = scanner.nextLine();
-
-        if (operation.equals("sum")) {
-            System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
-        }
-
-        scanner.close();
+        numbers[0] = 100;
+        System.out.println(Arrays.toString(numbers));
+        System.out.println(Arrays.toString(realCopy));
+        System.out.println(Arrays.equals(numbers, realCopy));
+        // This will also return false
     }
 
 }

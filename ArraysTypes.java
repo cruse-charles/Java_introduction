@@ -65,17 +65,23 @@ public class ArraysTypes {
         // variable and points to the original source
 
         System.out.println(numbers == copyOfNumbers);
-        // This will actually return false.. not sure why even though they are identical
-        // copies
+        // This will actually return as true since they reference the same point in
+        // memory
 
         System.out.println(Arrays.equals(numbers, copyOfNumbers));
-        // This will come out as true
+        // This will come out as true as well
 
         int realCopy[] = Arrays.copyOf(numbers, numbers.length);
         // This is how we make a real copy, takes the array and the length, we can make
         // the array larger or smaller too which will fill more elements with 0, the
         // default value for integers. If we make it smaller, it just copies those first
         // X values
+
+        System.out.println(numbers == realCopy);
+        // This will reteurn as false now
+
+        System.out.println(Arrays.equals(numbers, realCopy));
+        // This will return true because of the values being the same
 
         int realCopyRange[] = Arrays.copyOfRange(numbers, startingIndex, endingIndex);
         // This is how we copy a range within the array
