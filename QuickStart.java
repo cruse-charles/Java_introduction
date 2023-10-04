@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.HashMap;
 
 class QuickStart {
     // static int age = 27; -> Can have our variable initialized outside of our
