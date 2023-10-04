@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -18,12 +19,17 @@ class QuickStart {
         // age = 28;
         // System.out.println("I am " + age + " years old.");
 
-        int number = 5;
-        int multiplier = 1;
+        User youngerUser = new User("Charles Cruse", "1994-02-21");
+        User olderUser = new User("Kevin Cruse", "1997-05-30");
 
-        while (multiplier <= 5) {
-            System.out.printf("%d * %d \n", number, multiplier);
-            multiplier++;
-        }
+        Book book1 = new Book("Carmilla", "Sheridan Le Fanu", 270);
+        AudioBook book2 = new AudioBook("Dracula", "Bram Stoker", 30000);
+        Ebook book3 = new Ebook("Carry on", "P.G Wode", 280, "pdf");
+
+        youngerUser.borrow(book1);
+        youngerUser.borrow(book2);
+        youngerUser.borrow(book3);
+
+        System.out.printf("%s has borrowed these books: %s \n", youngerUser.getName(), youngerUser.borrowedBooks());
     }
 }
